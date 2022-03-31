@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <title>Enviar correo</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="margin-top: 2em;">Bienvenido</h1>
+      <p>
+        Trabajo de envio de correo con NODE.JS desde formulario
+      </p>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title">
+            <h2 class="title">Envia un correo</h2>
+            <p>Los comentarios serán bienvenidos</p>
+            <hr />
+            <form id="contact-form" method="post" action="send" enctype="multipart/form-data">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input placeholder="Nombre" id="name" name="name"type="text" class="form-control" required/>
+                  </div>
+                  <div class="col-md-6">
+                    <input placeholder="Correo electrónico" id="email" type="email" name="email" class="form-control" aria-describedby="emailHelp" required/>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input placeholder="Asunto" id="subject" name="subject" type="text" class="form-control" required/>
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Mensaje" id="message" name="message" class="form-control" rows="3" required></textarea>
+              </div>
+              <button type="submit" value="Enviar" class="btn btn-primary">
+                Enviar correo
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer style="position: fixed; left: 2em; bottom: 0;" class="page-footer font-small blue">
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">
+        © 2022 hecho por
+        <a href="http://juancarlosmacias.es">JCMS</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <script src="./index.js"></script>
+  </body>
+</html>
